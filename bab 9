@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bab 9: JavaScript Dasar</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f0f0f0; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .card { background: white; border-radius: 10px; padding: 20px; margin: 20px 0; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { color: #333; border-bottom: 3px solid #4CAF50; }
+        button { background: #4CAF50; color: white; border: none; padding: 8px 15px; border-radius: 3px; cursor: pointer; margin: 5px; }
+        .output { background: #333; color: white; padding: 10px; border-radius: 5px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">📝 BAB 9: JAVASCRIPT DASAR</h1>
+        
+        <!-- A. Cara Penulisan -->
+        <div class="card">
+            <h2>A. Cara Penulisan JavaScript</h2>
+            
+            <div style="background: #ffebee; padding: 10px;">
+                <strong>BEFORE:</strong> Klik tombol (belum ada JS)
+                <button onclick="alert('Ini inline JavaScript!')">Tombol Inline</button>
+            </div>
+            
+            <div style="background: #e8f5e9; padding: 10px; margin-top: 10px;">
+                <strong>AFTER:</strong> Dengan JavaScript
+                <button onclick="tampilPesan()">Internal JS</button>
+                <button onclick="sapaDariHead()">Fungsi dari Head</button>
+            </div>
+            
+            <div class="output" id="outputJs">
+                Output akan muncul di sini
+            </div>
+        </div>
+        
+        <!-- B. Variabel dan Tipe Data -->
+        <div class="card">
+            <h2>B. Variabel dan Tipe Data</h2>
+            
+            <div style="background: #ffebee; padding: 10px;">
+                <strong>BEFORE:</strong> Belum ada perhitungan
+            </div>
+            
+            <div style="background: #e8f5e9; padding: 10px; margin-top: 10px;">
+                <strong>AFTER:</strong> Demo variabel
+                <button onclick="demoVariabel()">Jalankan Demo</button>
+            </div>
+            
+            <div class="output" id="outputVar"></div>
+        </div>
+        
+        <!-- C. DOM -->
+        <div class="card">
+            <h2>C. DOM (Document Object Model)</h2>
+            
+            <p id="domDemo">BEFORE: Teks ini akan diubah</p>
+            
+            <button onclick="document.getElementById('domDemo').innerHTML = 'AFTER: Teks berhasil diubah!'">
+                Ubah dengan getElementById
+            </button>
+            
+            <button onclick="document.getElementById('domDemo').style.color = 'blue'">
+                Ubah Warna
+            </button>
+            
+            <button onclick="document.getElementById('domDemo').style.fontSize = '24px'">
+                Perbesar Ukuran
+            </button>
+        </div>
+        
+        <!-- D. Event -->
+        <div class="card">
+            <h2>D. Event JavaScript</h2>
+            
+            <div style="border: 2px solid #333; padding: 20px; text-align: center; background: #f9f9f9;"
+                 onclick="tampilEvent('Klik pada kotak')"
+                 ondblclick="tampilEvent('Double klik pada kotak')"
+                 onmouseover="tampilEvent('Mouse masuk kotak')"
+                 onmouseout="tampilEvent('Mouse keluar kotak')">
+                🖱️ Arahkan atau klik di sini
+            </div>
+            
+            <input type="text" placeholder="Ketik sesuatu" 
+                   onkeydown="tampilEvent('Key down: ' + event.key)"
+                   onkeyup="tampilEvent('Key up')"
+                   style="width: 100%; padding: 10px; margin: 10px 0;">
+            
+            <div class="output" id="outputEvent"></div>
+        </div>
+    </div>
+    
+    <script>
+        // Fungsi-fungsi JavaScript
+        function tampilPesan() {
+            document.getElementById("outputJs").innerHTML = "✅ Internal JavaScript dipanggil!";
+        }
+        
+        function sapaDariHead() {
+            document.getElementById("outputJs").innerHTML = "✅ Fungsi dari HEAD dipanggil!";
+        }
+        
+        function demoVariabel() {
+            var nama = "Budi";
+            let umur = 25;
+            let tinggi = 175.5;
+            var isMenikah = false;
+            
+            var x = 5;
+            var y = "10";
+            var hasil = x + y;  // "510" (string)
+            var hasilKali = x * y; // 50 (number)
+            
+            let output = "📊 DEMO VARIABEL:<br>";
+            output += "nama = " + nama + " (tipe: " + typeof nama + ")<br>";
+            output += "umur = " + umur + " (tipe: " + typeof umur + ")<br>";
+            output += "tinggi = " + tinggi + " (tipe: " + typeof tinggi + ")<br>";
+            output += "isMenikah = " + isMenikah + " (tipe: " + typeof isMenikah + ")<br><br>";
+            output += "📝 TIPE DATA IMPLICIT:<br>";
+            output += "x = 5 (number), y = '10' (string)<br>";
+            output += "x + y = " + hasil + " (string - karena penggabungan)<br>";
+            output += "x * y = " + hasilKali + " (number - karena operasi matematika)";
+            
+            document.getElementById("outputVar").innerHTML = output;
+        }
+        
+        function tampilEvent(pesan) {
+            let output = document.getElementById("outputEvent");
+            let waktu = new Date().toLocaleTimeString();
+            output.innerHTML = "[" + waktu + "] " + pesan + "<br>" + output.innerHTML;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bab 5: Position CSS</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f0f0f0; height: 1500px; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .card { background: white; border-radius: 10px; padding: 20px; margin: 20px 0; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { color: #333; border-bottom: 3px solid #4CAF50; }
+        .demo-box { border: 2px solid #333; padding: 10px; margin: 20px 0; background: #f9f9f9; position: relative; height: 150px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">📝 BAB 5: POSITION CSS</h1>
+        
+        <div class="card">
+            <h2>🔹 Jenis-jenis Position</h2>
+            <table width="100%" border="1" cellpadding="8">
+                <tr bgcolor="#4CAF50" style="color: white;">
+                    <th>Position</th>
+                    <th>Penjelasan</th>
+                </tr>
+                <tr><td>static</td><td>Default, mengikuti alur normal</td></tr>
+                <tr><td>relative</td><td>Relatif terhadap posisi normalnya</td></tr>
+                <tr><td>absolute</td><td>Relatif terhadap parent yang diposition</td></tr>
+                <tr><td>fixed</td><td>Relatif terhadap viewport (tetap meski di-scroll)</td></tr>
+                <tr><td>sticky</td><td>Gabungan relative dan fixed</td></tr>
+            </table>
+        </div>
+        
+        <!-- STATIC -->
+        <div class="card">
+            <h2>1. STATIC (Default)</h2>
+            <div style="background: #ffebee; padding: 10px;">
+                <strong>BEFORE:</strong> Posisi normal
+            </div>
+            <div style="background: #e8f5e9; padding: 10px; margin-top: 10px;">
+                <strong>AFTER:</strong> Dengan position: static
+                <div style="position: static; background: lightgray; padding: 10px; border: 1px solid black;">
+                    Ini element dengan position: static (tetap normal)
+                </div>
+                <p><i>Property top/left/right/bottom tidak berpengaruh</i></p>
+            </div>
+        </div>
+        
+        <!-- RELATIVE -->
+        <div class="card">
+            <h2>2. RELATIVE</h2>
+            <div style="background: #ffebee; padding: 10px;">
+                <strong>BEFORE:</strong> Posisi normal
+                <div style="background: lightblue; padding: 10px;">Kotak normal</div>
+            </div>
+            <div style="background: #e8f5e9; padding: 10px; margin-top: 10px;">
+                <strong>AFTER:</strong> Dengan position: relative
+                <div style="position: relative; background: lightblue; padding: 10px; left: 50px; top: 20px; border: 1px solid blue;">
+                    Kotak bergeser 50px ke kanan, 20px ke bawah dari posisi aslinya
+                </div>
+                <p><i>Property left:50px; top:20px;</i></p>
+            </div>
+        </div>
+        
+        <!-- ABSOLUTE -->
+        <div class="card">
+            <h2>3. ABSOLUTE</h2>
+            <div class="demo-box" style="position: relative; background: #ffebee;">
+                <strong>BEFORE:</strong> Container relative (parent)
+                <div style="background: lightcoral; padding: 10px; width: 100px;">Child normal</div>
+            </div>
+            <div class="demo-box" style="position: relative; background: #e8f5e9;">
+                <strong>AFTER:</strong> Child dengan position: absolute
+                <div style="position: absolute; background: lightcoral; padding: 10px; right: 10px; top: 10px; border: 1px solid red;">
+                    Absolute: di pojok kanan atas container
+                </div>
+                <p style="margin-top: 60px;">Container ini position: relative, jadi element absolute berada di dalamnya</p>
+            </div>
+        </div>
+        
+        <!-- FIXED -->
+        <div class="card">
+            <h2>4. FIXED</h2>
+            <p>Element fixed akan tetap di tempat meski halaman di-scroll</p>
+            <div style="position: fixed; bottom: 20px; right: 20px; background: lightgreen; padding: 15px; border: 2px solid green; border-radius: 10px; z-index: 100;">
+                📌 FIXED: Saya tetap di sini!
+            </div>
+            <p><i>Coba scroll halaman ini, kotak hijau akan tetap di pojok kanan bawah</i></p>
+        </div>
+        
+        <!-- STICKY -->
+        <div class="card">
+            <h2>5. STICKY</h2>
+            <div style="position: sticky; top: 0; background: orange; padding: 15px; border: 2px solid darkorange; z-index: 50;">
+                🟠 STICKY: Saya akan nempel di atas kalau di-scroll!
+            </div>
+            <p><i>Scroll halaman ini, element orange akan nempel di atas</i></p>
+        </div>
+        
+        <div class="card">
+            <h2>🔹 Rangkuman</h2>
+            <table width="100%" border="1" cellpadding="8">
+                <tr bgcolor="#4CAF50" style="color: white;">
+                    <th>Position</th>
+                    <th>Relatif terhadap</th>
+                    <th>Keluar dari alur?</th>
+                </tr>
+                <tr><td>static</td><td>-</td><td>Tidak</td></tr>
+                <tr><td>relative</td><td>Posisi normalnya</td><td>Tidak</td></tr>
+                <tr><td>absolute</td><td>Parent terdekat yang diposition</td><td>Ya</td></tr>
+                <tr><td>fixed</td><td>Viewport (jendela browser)</td><td>Ya</td></tr>
+                <tr><td>sticky</td><td>Parent & viewport</td><td>Tidak (kecuali aktif)</td></tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

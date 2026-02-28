@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bab 7: Desain Table</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f0f0f0; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .card { background: white; border-radius: 10px; padding: 20px; margin: 20px 0; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { color: #333; border-bottom: 3px solid #4CAF50; }
+        
+        /* BEFORE: Table biasa */
+        .table-before {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+        .table-before, .table-before th, .table-before td {
+            border: 1px solid black;
+        }
+        .table-before th, .table-before td {
+            padding: 8px;
+        }
+        
+        /* AFTER: Table keren (dari modul) */
+        .table1 {
+            font-family: sans-serif;
+            color: #444;
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid #f2f5f7;
+            margin-bottom: 30px;
+        }
+        .table1 th {
+            background: #35A90B;
+            color: white;
+            font-weight: normal;
+            padding: 12px 8px;
+        }
+        .table1 td {
+            padding: 8px 12px;
+            text-align: center;
+        }
+        .table1 tr:hover {
+            background-color: #f5f5f5;
+        }
+        .table1 tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        /* Style table lain */
+        .table2 {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .table2 th {
+            background: #3498db;
+            color: white;
+            padding: 12px;
+        }
+        .table2 td {
+            padding: 10px;
+            background: white;
+        }
+        .table2 tr {
+            border-bottom: 1px solid #ddd;
+        }
+        .table2 tr:hover td {
+            background: #f1f9ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">📝 BAB 7: DESAIN TABLE DENGAN CSS</h1>
+        
+        <div class="card">
+            <h2>🔹 Property untuk Table</h2>
+            <table width="100%" border="1" cellpadding="8">
+                <tr bgcolor="#4CAF50" style="color: white;">
+                    <th>Property</th>
+                    <th>Fungsi</th>
+                </tr>
+                <tr><td>border-collapse</td><td>Menggabungkan border (collapse/separate)</td></tr>
+                <tr><td>border-spacing</td><td>Jarak antar sel</td></tr>
+                <tr><td>text-align</td><td>Perataan teks dalam sel</td></tr>
+                <tr><td>vertical-align</td><td>Perataan vertikal dalam sel</td></tr>
+                <tr><td>:hover</td><td>Efek saat mouse di atas baris</td></tr>
+                <tr><td>:nth-child()</td><td>Mewarnai baris genap/ganjil</td></tr>
+            </table>
+        </div>
+        
+        <!-- BEFORE -->
+        <div class="card">
+            <h2>BEFORE: Table Standar HTML</h2>
+            <table class="table-before">
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Usia</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Andi</td>
+                    <td>Magelang</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Budi</td>
+                    <td>Jakarta</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sanusi</td>
+                    <td>Malang</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Dewi</td>
+                    <td>Surabaya</td>
+                    <td>25</td>
+                </tr>
+            </table>
+            <p><i>Tabel biasa, border hitam, tampilannya standar</i></p>
+        </div>
+        
+        <!-- AFTER 1 -->
+        <div class="card">
+            <h2>AFTER 1: Table dengan CSS (Style Modul)</h2>
+            <table class="table1">
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Usia</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Andi</td>
+                    <td>Magelang</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Budi</td>
+                    <td>Jakarta</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sanusi</td>
+                    <td>Malang</td>
+                    <td>29</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Dewi</td>
+                    <td>Surabaya</td>
+                    <td>25</td>
+                </tr>
+            </table>
+            <p><i>✓ Header hijau<br>✓ Hover effect<br>✓ Baris genap warna abu-abu<br>✓ Border rapi</i></p>
+        </div>
+        
+        <!-- AFTER 2 -->
+        <div class="card">
+            <h2>AFTER 2: Table dengan Style Berbeda</h2>
+            <table class="table2">
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Usia</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Andi</td>
+                    <td>Magelang</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Budi</td>
+                    <td>Jakarta</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sanusi</td>
+                    <td>Malang</td>
+                    <td>29</td>
+                </tr>
+            </table>
+            <p><i>✓ Header biru<br>✓ Tanpa border vertikal<br>✓ Hover dengan background biru muda</i></p>
+        </div>
+        
+        <!-- PERBANDINGAN -->
+        <div class="card">
+            <h2>🔹 Perbandingan Langsung</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                    <h4 style="color: #f44336;">BEFORE</h4>
+                    <table border="1" width="100%">
+                        <tr><th>No</th><th>Nama</th></tr>
+                        <tr><td>1</td><td>Andi</td></tr>
+                        <tr><td>2</td><td>Budi</td></tr>
+                    </table>
+                </div>
+                <div>
+                    <h4 style="color: #4CAF50;">AFTER</h4>
+                    <table style="width:100%; border-collapse:collapse; background:white;">
+                        <tr style="background:#35A90B; color:white;"><th>No</th><th>Nama</th></tr>
+                        <tr style="background:#f2f2f2;"><td>1</td><td>Andi</td></tr>
+                        <tr><td>2</td><td>Budi</td></tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

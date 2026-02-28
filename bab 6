@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bab 6: Float CSS</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f0f0f0; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .card { background: white; border-radius: 10px; padding: 20px; margin: 20px 0; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { color: #333; border-bottom: 3px solid #4CAF50; }
+        .kotak { width: 150px; height: 150px; background: lightblue; border: 2px solid blue; display: flex; align-items: center; justify-content: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">📝 BAB 6: FLOAT CSS</h1>
+        
+        <div class="card">
+            <h2>🔹 Property Float</h2>
+            <table width="100%" border="1" cellpadding="8">
+                <tr bgcolor="#4CAF50" style="color: white;">
+                    <th>Value</th>
+                    <th>Fungsi</th>
+                </tr>
+                <tr><td>left</td><td>Element mengambang ke kiri</td></tr>
+                <tr><td>right</td><td>Element mengambang ke kanan</td></tr>
+                <tr><td>none</td><td>Default, tidak mengambang</td></tr>
+                <tr><td>inherit</td><td>Mengikuti nilai float dari parent</td></tr>
+            </table>
+        </div>
+        
+        <!-- BEFORE -->
+        <div class="card">
+            <h2>BEFORE: Tanpa Float</h2>
+            <div style="border: 2px solid black; padding: 10px;">
+                <div class="kotak" style="display: inline-block;">Kotak</div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+        </div>
+        
+        <!-- FLOAT LEFT -->
+        <div class="card">
+            <h2>AFTER 1: Float: Left</h2>
+            <div style="border: 2px solid black; padding: 10px; overflow: auto;">
+                <div class="kotak" style="float: left; margin-right: 15px; margin-bottom: 10px;">Float Left</div>
+                <p>Kotak ini di-float: left. Teks akan mengelilinginya di sebelah kanan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            </div>
+        </div>
+        
+        <!-- FLOAT RIGHT -->
+        <div class="card">
+            <h2>AFTER 2: Float: Right</h2>
+            <div style="border: 2px solid black; padding: 10px; overflow: auto;">
+                <div class="kotak" style="float: right; margin-left: 15px; margin-bottom: 10px; background: lightcoral; border-color: red;">Float Right</div>
+                <p>Kotak ini di-float: right. Teks akan mengelilinginya di sebelah kiri. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </div>
+        
+        <!-- LAYOUT DENGAN FLOAT -->
+        <div class="card">
+            <h2>AFTER 3: Layout dengan Float</h2>
+            <div style="border: 2px solid black; padding: 10px;">
+                <div style="float: left; width: 48%; background: lightgreen; padding: 10px; margin-right: 2%; box-sizing: border-box;">
+                    <h4>Kolom Kiri (float: left)</h4>
+                    <p>Ini kolom kiri dengan lebar 48%</p>
+                </div>
+                <div style="float: left; width: 48%; background: lightyellow; padding: 10px; box-sizing: border-box;">
+                    <h4>Kolom Kanan (float: left)</h4>
+                    <p>Ini kolom kanan dengan lebar 48%</p>
+                </div>
+                <div style="clear: both; padding-top: 10px;">
+                    <p><strong>Clear: both</strong> digunakan untuk membersihkan float</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- GALLERY DENGAN FLOAT -->
+        <div class="card">
+            <h2>AFTER 4: Gallery dengan Float</h2>
+            <div style="border: 2px solid black; padding: 10px; overflow: auto;">
+                <div style="float: left; width: 30%; margin: 1.5%; background: lightblue; padding: 20px; text-align: center; box-sizing: border-box;">Gambar 1</div>
+                <div style="float: left; width: 30%; margin: 1.5%; background: lightgreen; padding: 20px; text-align: center; box-sizing: border-box;">Gambar 2</div>
+                <div style="float: left; width: 30%; margin: 1.5%; background: lightcoral; padding: 20px; text-align: center; box-sizing: border-box;">Gambar 3</div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>🔹 Clear Float</h2>
+            <p>Clear digunakan untuk membersihkan efek float:</p>
+            <ul>
+                <li>clear: left - membersihkan float left</li>
+                <li>clear: right - membersihkan float right</li>
+                <li>clear: both - membersihkan kedua float</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

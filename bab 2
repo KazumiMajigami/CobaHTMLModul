@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bab 2: Margin dan Padding</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f0f0f0; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .card { background: white; border-radius: 10px; padding: 20px; margin: 20px 0; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { color: #333; border-bottom: 3px solid #4CAF50; }
+        .box { background: rgb(152, 211, 246); border: 2px solid blue; padding: 10px; margin: 5px; }
+        .keterangan { background: yellow; padding: 5px; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">📝 BAB 2: MARGIN DAN PADDING</h1>
+        
+        <!-- MARGIN -->
+        <div class="card">
+            <h2>🔹 MARGIN (Jarak Luar)</h2>
+            
+            <div style="background: #ffebee; padding: 10px; margin-bottom: 20px;">
+                <strong>BEFORE:</strong> Tanpa Margin
+                <div class="box">Box 1 - Tanpa margin (nempel)</div>
+                <div class="box">Box 2 - Tanpa margin (nempel)</div>
+            </div>
+            
+            <div style="background: #e8f5e9; padding: 10px;">
+                <strong>AFTER:</strong> Dengan Margin
+                <div class="box" style="margin: 20px;">Box 1 - Margin 20px semua sisi</div>
+                <div class="box" style="margin-left: 70px; margin-top: 30px;">Box 2 - margin-left:70px, margin-top:30px</div>
+                <div class="box" style="margin: 10px 50px;">Box 3 - margin: 10px 50px (atas/bawah 10px, kiri/kanan 50px)</div>
+            </div>
+            
+            <div class="keterangan" style="margin-top: 20px;">
+                ✅ Margin mengatur jarak ANTAR element
+            </div>
+        </div>
+        
+        <!-- PADDING -->
+        <div class="card">
+            <h2>🔹 PADDING (Jarak Dalam)</h2>
+            
+            <div style="background: #ffebee; padding: 10px; margin-bottom: 20px;">
+                <strong>BEFORE:</strong> Tanpa Padding
+                <div class="box" style="padding: 0;">Box tanpa padding - teks nempel ke tepi</div>
+            </div>
+            
+            <div style="background: #e8f5e9; padding: 10px;">
+                <strong>AFTER:</strong> Dengan Padding
+                <div class="box" style="padding: 20px;">Box 1 - Padding 20px (semua sisi)</div>
+                <div class="box" style="padding-left: 70px; padding-top: 30px;">Box 2 - padding-left:70px, padding-top:30px</div>
+                <div class="box" style="padding: 10px 50px;">Box 3 - padding: 10px 50px (atas/bawah 10px, kiri/kanan 50px)</div>
+            </div>
+            
+            <div class="keterangan" style="margin-top: 20px;">
+                ✅ Padding mengatur jarak DIDALAM element (antara border dan konten)
+            </div>
+        </div>
+        
+        <!-- PERBANDINGAN LANGSUNG -->
+        <div class="card">
+            <h2>🔹 PERBANDINGAN</h2>
+            <table width="100%" border="1" cellpadding="10">
+                <tr bgcolor="#ddd">
+                    <th>Property</th>
+                    <th>Fungsi</th>
+                    <th>Contoh</th>
+                </tr>
+                <tr>
+                    <td>margin</td>
+                    <td>Jarak luar element</td>
+                    <td>margin: 20px;</td>
+                </tr>
+                <tr>
+                    <td>margin-top</td>
+                    <td>Jarak luar atas</td>
+                    <td>margin-top: 10px;</td>
+                </tr>
+                <tr>
+                    <td>margin-right</td>
+                    <td>Jarak luar kanan</td>
+                    <td>margin-right: 15px;</td>
+                </tr>
+                <tr>
+                    <td>margin-bottom</td>
+                    <td>Jarak luar bawah</td>
+                    <td>margin-bottom: 10px;</td>
+                </tr>
+                <tr>
+                    <td>margin-left</td>
+                    <td>Jarak luar kiri</td>
+                    <td>margin-left: 70px;</td>
+                </tr>
+                <tr>
+                    <td>padding</td>
+                    <td>Jarak dalam element</td>
+                    <td>padding: 20px;</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

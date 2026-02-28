@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bab 4: Format Teks</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f0f0f0; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .card { background: white; border-radius: 10px; padding: 20px; margin: 20px 0; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { color: #333; border-bottom: 3px solid #4CAF50; }
+        .demo-box { border: 1px solid #ddd; padding: 15px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">📝 BAB 4: FORMAT TEKS</h1>
+        
+        <div class="card">
+            <h2>🔹 Property Format Teks</h2>
+            <table width="100%" border="1" cellpadding="8">
+                <tr bgcolor="#4CAF50" style="color: white;">
+                    <th>Property</th>
+                    <th>Fungsi</th>
+                </tr>
+                <tr><td>color</td><td>Warna teks</td></tr>
+                <tr><td>text-align</td><td>Perataan teks (left/center/right/justify)</td></tr>
+                <tr><td>text-decoration</td><td>Garis pada teks (underline/overline/line-through)</td></tr>
+                <tr><td>text-transform</td><td>Huruf kapital (uppercase/lowercase/capitalize)</td></tr>
+                <tr><td>text-indent</td><td>Jarak alinea</td></tr>
+                <tr><td>letter-spacing</td><td>Jarak antar huruf</td></tr>
+                <tr><td>word-spacing</td><td>Jarak antar kata</td></tr>
+                <tr><td>line-height</td><td>Jarak antar baris</td></tr>
+            </table>
+        </div>
+        
+        <div class="card">
+            <h2>🔹 Contoh Format Teks</h2>
+            
+            <!-- Contoh 1 -->
+            <div class="demo-box" style="background: #ffebee;">
+                <strong>BEFORE:</strong> Teks biasa
+                <p>Mengatur format text dengan CSS - ini teks biasa</p>
+            </div>
+            
+            <div class="demo-box" style="background: #e8f5e9;">
+                <strong>AFTER 1:</strong> color + underline
+                <p style="color: rgb(112, 174, 219); text-decoration: underline;">
+                    Mengatur format text dengan CSS (biru + garis bawah)
+                </p>
+            </div>
+            
+            <div class="demo-box" style="background: #e8f5e9;">
+                <strong>AFTER 2:</strong> text-align: right + text-transform: capitalize + overline
+                <p style="text-align: right; text-transform: capitalize; text-decoration: overline; color: green;">
+                    mengatur format text dengan css (rata kanan, kapital, garis atas)
+                </p>
+            </div>
+            
+            <div class="demo-box" style="background: #e8f5e9;">
+                <strong>AFTER 3:</strong> text-align: center + text-transform: lowercase + line-through + word-spacing
+                <p style="text-align: center; text-transform: lowercase; text-decoration: line-through; word-spacing: 10px; color: red;">
+                    MENGATUR FORMAT TEXT DENGAN CSS (tengah, kecil semua, dicoret)
+                </p>
+            </div>
+            
+            <div class="demo-box" style="background: #e8f5e9;">
+                <strong>AFTER 4:</strong> text-transform: uppercase + text-indent + line-height + letter-spacing
+                <p style="text-transform: uppercase; text-indent: 30px; line-height: 30px; letter-spacing: 5px;">
+                    Ini contoh teks dengan indent 30px, line height 30px, letter spacing 5px. Lorem ipsum dolor sit amet.
+                </p>
+            </div>
+            
+            <div class="demo-box" style="background: #e8f5e9;">
+                <strong>AFTER 5:</strong> text-shadow
+                <p style="text-shadow: 2px 2px 5px blue; font-size: 24px; color: navy;">
+                    Teks dengan shadow
+                </p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>🔹 Perbandingan Text-align</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <div>
+                    <p><strong>left (default):</strong></p>
+                    <p style="text-align: left; background: #eee;">Rata kiri</p>
+                </div>
+                <div>
+                    <p><strong>right:</strong></p>
+                    <p style="text-align: right; background: #eee;">Rata kanan</p>
+                </div>
+                <div>
+                    <p><strong>center:</strong></p>
+                    <p style="text-align: center; background: #eee;">Rata tengah</p>
+                </div>
+                <div>
+                    <p><strong>justify:</strong></p>
+                    <p style="text-align: justify; background: #eee;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

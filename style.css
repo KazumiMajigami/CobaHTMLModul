@@ -1,0 +1,91 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    display: grid;
+    gap: 5px;
+}
+
+h2 {
+    text-align: center;
+    color: #444;
+    margin: 5px 0 10px 0;
+    font-size: 20px;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 100px 15px auto;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.separator {
+    text-align: center;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+input[type="text"], 
+input[type="date"] {
+    padding: 4px 6px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+input[type="radio"] {
+    margin: 0 2px 0 0;
+    transform: scale(0.9);
+}
+
+.radio-group label {
+    font-weight: normal;
+    margin-right: 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+input[type="submit"]:hover {
+    background: #218838;
+}
+
+/* Biar teks di samping radio button nggak bold */
+.radio-group input[type="radio"] + label {
+    font-weight: normal;
+}

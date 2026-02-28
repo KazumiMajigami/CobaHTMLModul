@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Bab 8: Desain Form</title>
+    <style>
+        body { font-family: 'Courier New', Courier, monospace; background: #f4f4f4; padding: 20px; }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .card { background: white; border-radius: 10px; padding: 20px; margin: 20px 0; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { color: #333; border-bottom: 3px solid #4CAF50; }
+        
+        /* Style Form Modern (dari modul) */
+        .form-modern {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            display: grid;
+            grid-template-columns: 120px 10px 1fr;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            font-weight: bold;
+        }
+        
+        .separator {
+            text-align: center;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .btn-submit {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        
+        .btn-submit:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">📝 BAB 8: DESAIN FORM</h1>
+        
+        <!-- BEFORE -->
+        <div class="card">
+            <h2>BEFORE: Form Tanpa CSS</h2>
+            <div style="border: 1px solid #ddd; padding: 20px; background: white;">
+                <h3 style="text-align: center;">Form Pendaftaran</h3>
+                Nama Lengkap : <input type="text"><br><br>
+                Alamat : <input type="text"><br><br>
+                Tempat Lahir : <input type="text"><br><br>
+                Tanggal Lahir : <input type="date"><br><br>
+                Jenis Kelamin : 
+                <input type="radio" name="jk"> Laki-laki
+                <input type="radio" name="jk"> Perempuan<br><br>
+                <input type="submit" value="Daftar">
+            </div>
+            <p><i>Tampilan berantakan, tidak rapi, default browser</i></p>
+        </div>
+        
+        <!-- AFTER 1: Form dengan Grid -->
+        <div class="card">
+            <h2>AFTER 1: Form dengan CSS Grid (Style Modul)</h2>
+            <form class="form-modern">
+                <h2 style="text-align: center; margin-top: 0;">Formulir Pendaftaran</h2>
+                
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <span class="separator">:</span>
+                    <input type="text" id="nama" placeholder="Masukkan nama">
+                </div>
+                
+                <div class="form-group">
+                    <label for="alamat">Alamat</label>
+                    <span class="separator">:</span>
+                    <textarea id="alamat" rows="2" placeholder="Masukkan alamat"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="tptlahir">Tempat Lahir</label>
+                    <span class="separator">:</span>
+                    <input type="text" id="tptlahir" placeholder="Tempat lahir">
+                </div>
+                
+                <div class="form-group">
+                    <label for="tgllahir">Tanggal Lahir</label>
+                    <span class="separator">:</span>
+                    <input type="date" id="tgllahir">
+                </div>
+                
+                <div class="form-group">
+                    <label>Jenis Kelamin</label>
+                    <span class="separator">:</span>
+                    <div class="radio-group">
+                        <input type="radio" name="jk" id="laki"> <label for="laki">Laki-laki</label>
+                        <input type="radio" name="jk" id="perempuan"> <label for="perempuan">Perempuan</label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-submit">Daftar</button>
+            </form>
+        </div>
+        
+        <!-- AFTER 2: Form dengan Style Berbeda -->
+        <div class="card">
+            <h2>AFTER 2: Form dengan Style Kustom</h2>
+            <div style="max-width: 500px; margin: 0 auto; background: #f9f9f9; padding: 30px; border-radius: 15px; border: 2px solid #4CAF50;">
+                <h2 style="text-align: center; color: #4CAF50;">📋 Pendaftaran</h2>
+                
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Nama Lengkap</label>
+                    <input type="text" style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px;">
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Tempat/Tgl Lahir</label>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <input type="text" placeholder="Tempat" style="padding: 10px; border: 2px solid #ddd; border-radius: 5px;">
+                        <input type="date" style="padding: 10px; border: 2px solid #ddd; border-radius: 5px;">
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Jenis Kelamin</label>
+                    <div style="display: flex; gap: 20px;">
+                        <label><input type="radio" name="jk2"> Laki-laki</label>
+                        <label><input type="radio" name="jk2"> Perempuan</label>
+                    </div>
+                </div>
+                
+                <button style="background: #4CAF50; color: white; border: none; padding: 12px; width: 100%; border-radius: 5px; font-size: 16px; cursor: pointer;">
+                    Daftar Sekarang
+                </button>
+            </div>
+        </div>
+        
+        <!-- PERBANDINGAN -->
+        <div class="card">
+            <h2>🔹 Perbandingan</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div style="border: 2px solid #f44336; padding: 15px;">
+                    <h4 style="color: #f44336;">❌ BEFORE</h4>
+                    <ul>
+                        <li>Tidak rapi</li>
+                        <li>Default browser</li>
+                        <li>Susah dibaca</li>
+                    </ul>
+                </div>
+                <div style="border: 2px solid #4CAF50; padding: 15px;">
+                    <h4 style="color: #4CAF50;">✅ AFTER</h4>
+                    <ul>
+                        <li>Rapi dengan grid</li>
+                        <li>Padding & margin teratur</li>
+                        <li>Warna menarik</li>
+                        <li>User friendly</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

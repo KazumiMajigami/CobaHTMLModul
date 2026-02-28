@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bab 3: Pengaturan Font</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f0f0f0; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .card { background: white; border-radius: 10px; padding: 20px; margin: 20px 0; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        h2 { color: #333; border-bottom: 3px solid #4CAF50; }
+        .before { background: #ffebee; padding: 15px; margin: 10px 0; }
+        .after { background: #e8f5e9; padding: 15px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">📝 BAB 3: PENGATURAN FONT</h1>
+        
+        <div class="card">
+            <h2>🔹 Property Font di CSS</h2>
+            <table width="100%" border="1" cellpadding="8" style="margin-bottom: 20px;">
+                <tr bgcolor="#4CAF50" style="color: white;">
+                    <th>Property</th>
+                    <th>Fungsi</th>
+                </tr>
+                <tr><td>font-size</td><td>Ukuran font</td></tr>
+                <tr><td>font-weight</td><td>Ketebalan font (bold/normal)</td></tr>
+                <tr><td>font-family</td><td>Jenis font</td></tr>
+                <tr><td>font-style</td><td>Gaya font (italic/normal)</td></tr>
+                <tr><td>color</td><td>Warna font</td></tr>
+            </table>
+            
+            <!-- BEFORE -->
+            <div class="before">
+                <strong>BEFORE:</strong> Default Font
+                <p style="font-family: 'Times New Roman'; color: black; font-size: 16px;">
+                    Ini teks default (Times New Roman, hitam, 16px)
+                </p>
+            </div>
+            
+            <!-- AFTER - Contoh 1 -->
+            <div class="after">
+                <strong>AFTER 1:</strong> font-family: sans-serif; color: blue; font-style: normal;
+                <p style="color: rgb(0, 162, 255); font-family: sans-serif; font-size: 20px;">
+                    Teks Biru, Sans-serif, 20px
+                </p>
+            </div>
+            
+            <!-- AFTER - Contoh 2 -->
+            <div class="after">
+                <strong>AFTER 2:</strong> color: rgb(117, 202, 169); font-size: 24pt; font-style: italic;
+                <p style="color: rgb(117, 202, 169); font-size: 24pt; font-style: italic; font-family: 'Courier New';">
+                    Teks Hijau, Courier New, 24pt, Italic
+                </p>
+            </div>
+            
+            <!-- AFTER - Contoh 3 -->
+            <div class="after">
+                <strong>AFTER 3:</strong> color: rgb(234, 130, 130); font-weight: bold; font-style: oblique;
+                <p style="color: rgb(234, 130, 130); font-weight: bold; font-style: oblique; font-size: 18px;">
+                    Teks Merah, Bold, Oblique, 18px
+                </p>
+            </div>
+            
+            <!-- AFTER - Contoh 4 -->
+            <div class="after">
+                <strong>AFTER 4:</strong> Kombinasi semua property
+                <p style="color: purple; font-family: 'Verdana'; font-size: 22px; font-weight: bold; font-style: italic;">
+                    Teks Ungu, Verdana, 22px, Bold Italic
+                </p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>🔹 Perbandingan Langsung</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <div style="background: #ffebee; padding: 10px;">
+                    <strong>BEFORE:</strong><br>
+                    <span style="font-size: 16px;">Font 16px</span><br>
+                    <span style="font-weight: normal;">Normal weight</span><br>
+                    <span style="font-style: normal;">Normal style</span>
+                </div>
+                <div style="background: #e8f5e9; padding: 10px;">
+                    <strong>AFTER:</strong><br>
+                    <span style="font-size: 24px;">Font 24px</span><br>
+                    <span style="font-weight: bold;">Bold weight</span><br>
+                    <span style="font-style: italic;">Italic style</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
